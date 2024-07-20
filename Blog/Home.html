@@ -1,0 +1,501 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Page</title>
+    <!--Linked bootstrap.min.css file-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="Home.css">
+</head>
+<body>
+    <!--CPR mean basic elements make body of layout, Container , Row And col-->
+
+    <!--**********************ere I used navbar with dropdown*************************************************************************-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Coder</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Home.html.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">About</a>
+                    </li>
+                    <!-- drop down In NavBare *******************************-->
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Topic
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Technologies</a></li>
+                            <li><a class="dropdown-item" href="#">Data Science</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Artificial Intellegence</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contac Us.html">Contact Us</a>
+                    </li>
+
+
+                </ul>
+                <!-- SEARCH ,   When you apply d-flex to an element, it sets display: flex;, enabling flexbox properties
+                    on that element and its children. Flexbox allows you to control the alignment, order, 
+                    size, and spacing of elements within the container,
+                    making it easier to create complex and flexible layouts without relying heavily on floats or positioning hacks. *******************************-->
+
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+                <div class="mx-2">
+
+                    <!-- Button trigger for login modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        Login
+                    </button>
+                    <!-- Button trigger for  Sign Up model -->
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#signupModal">
+                        Sign Up
+                    </button>
+
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- LoginModal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+                </div>
+                <div class="modal-body">
+                    <!--form for input login data within login model-->
+                    <form>
+<!--mb margin button for buttom space to another div-->
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Sign Up Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Get Into Website</h1>
+
+                </div>
+                <div class="modal-body">
+                    <!--form for Sign Up account within sign up modal-->
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cexampleInputPassword1" class="form-label">Conform Password</label>
+                            <input type="password" class="form-control" id="cexampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Creat Account</button>
+                    </form>
+                </div>
+                <!--close Button-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--**********************Carousel slide with indicator*************************************************************************-->
+
+
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+
+            <div class="carousel-item active  " id="container2">
+                <img src="p1.jpg"  alt="..." >
+<!--    d-block mean will show in all screeen size or same to remove d class-->
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Welcome Here</h2>
+                    <p>Technologies and Development trends</p>
+                    <button type="button" class="btn btn-danger">Technologies</button>
+                    <button type="button" class="btn btn-primary">Development</button>
+                    <button type="button" class="btn btn-success">Artificial Intellegence</button>
+                </div>
+            </div>
+            <div class="carousel-item"  id="img2">
+                <!--  w-100 mean will occupy 100% of parent div, its rang form o to 100%. writen as w-25, w-50 , and so on -->
+                <img src="p2.jpg" alt="..." />
+                <!--    d-none mean will not show on xs screen beacuse xs have no break point write as below and d-md-block mean will show to md and bove all size -->
+
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Welcome Here</h2>
+                    <p>Technologies and Development trends</p>
+                    <button type="button" class="btn btn-warning">Primary</button>
+                    <button type="button" class="btn btn-dark">Secondary</button>
+                    <button type="button" class="btn btn-info">Success</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="p3.jpg" class="d-block w-100" alt="..." height="400">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Welcome Here</h2>
+                    <p>Technologies and Development trends</p>
+                    <button type="button" class="btn btn-light">Primary</button>
+                    <button type="button" class="btn btn-success">Secondary</button>
+                    <button type="button" class="btn btn-primary">Success</button>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+
+    <!--**********************Used two cards*************************************************************************-->
+    <!--card1 -->
+
+
+    <div class="container  my-4">
+        <div class="row mb-2">
+
+
+
+
+
+
+
+            <!--start Card 1-->
+            <!--break Point fir card 1-->
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">Network</strong>
+                        <h3 class="mb-0">Learn Networking</h3>
+                        <div class="mb-1 text-body-danger text-danger">Nov 12</div>
+                        <p class="card-text mb-auto">
+                            Networking refers to the practice of designing, implementing, and managing computer networks, enabling communication and data exchange between devices and systems.
+
+                        </p>
+                        <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                            Continue reading
+                        </a>
+                    </div>
+                    <!--for extra small break point there is no keyword mean write direct as below for xs screen d-none mean pic will not show in xs
+            and d-sm-block mean show pic for all other screen.block mean will show and none mean will not show
+            col-auto mean will oocupy required space.
+
+            -->
+                    <div class="col-auto d-none d-sm-block">
+                        <!--image for card 1-->
+
+                        <img class="bd-placeholder-img" width="200" height="250" src="p1sm.jpg" />
+                    </div>
+                </div>
+            </div>
+            <!--Closed Card 1-->
+
+
+
+
+
+
+
+
+
+
+
+            <!--car 2-->
+
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success">Design</strong>
+                        <h3 class="mb-0">Learn Designing</h3>
+                        <div class="mb-1 text-body-succes text-primary">Nov 14</div>
+                        <p class="mb-auto"> Web design encompasses the visual and user experience aspects of creating websites, focusing on aesthetics, layout, and usability to enhance user interaction and engagement.</p>
+                        <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                            Continue reading
+                            <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+                        </a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img class="bd-placeholder-img " width="200" height="250" src="design.jpg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--**********************Again Used two cards from Blogs templates*************************************************************************-->
+
+
+
+    <div class="container  my-4">
+        <div class="row mb-2">
+
+
+
+
+
+            <!--car 3-->
+
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-danger">Python</strong>
+                        <h3 class="mb-0">Learn Python</h3>
+                        <div class="mb-1 text-body-primary text-success">Nov 12</div>
+                        <p class="card-text mb-auto">Python is a high-level, interpreted programming language known for its simplicity and readability, used extensively in web development, scientific computing, artificial intelligence, and automation..</p>
+                        <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                            Continue reading
+                        </a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+
+                        <img class="bd-placeholder-img" width="200" height="250" src="p1.jpg" />
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <!--car 4-->
+
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-warning">Web</strong>
+                        <h3 class="mb-0">Learn Web Development</h3>
+                        <div class="mb-1 text-body-secondary text-warning">Nov 14</div>
+                        <p class="mb-auto">Web development involves building and maintaining websites and web applications, utilizing languages like HTML, CSS, and JavaScript, often including backend frameworks and databases.</p>
+                        <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                            Continue reading
+                            <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+                        </a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img class="bd-placeholder-img " width="200" height="250" src="p2.jpg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--New cards-->
+    <!--**********************Used two cards *************************************************************************-->
+
+
+
+
+
+
+    <!--card5 -->
+
+
+    <div class="container  my-4">
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">Network</strong>
+                        <h3 class="mb-0">Learn Networking</h3>
+                        <div class="mb-1 text-body-secondary text-danger">Nov 12</div>
+                        <p class="card-text mb-auto">
+                            
+
+                            Networking: Networking refers to the practice of designing, implementing, and managing computer networks, enabling communication and data exchange between devices and systems.
+
+                        </p>
+                        <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                            Continue reading
+                        </a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+
+                        <img class="bd-placeholder-img" width="200" height="250" src="p1sm.jpg" />
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <!--car 6-->
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-danger">Java</strong>
+                        <h3 class="mb-0">Learn Java</h3>
+                        <div class="mb-1 text-body-danger text-success">Nov 14</div>
+                        <p class="mb-auto">
+                            Java: Java is a versatile, object-oriented programming language renowned for its platform independence, widely used in enterprise applications, Android app development, and web services.
+
+                          
+                        </p>
+                        <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                            Continue reading
+                            <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+                        </a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img class="bd-placeholder-img " width="200" height="250" src="p3.jpg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--**********************Again Used two cards from Blogs templates*************************************************************************-->
+
+
+
+    <div class="container  my-4">
+        <div class="row mb-2">
+
+
+
+
+
+
+            <!--car 7-->
+
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-danger">Kotline</strong>
+                        <h3 class="mb-0">Learn Kotlin</h3>
+                        <div class="mb-1 text-body-secondary text-warning">Dec 12</div>
+                        <p class="card-text mb-auto">
+                            Kotlin: Kotlin is a modern, statically-typed programming language developed by JetBrains, designed to interoperate fully with Java, known for concise syntax and strong null-safety features.
+
+
+                        </p>
+                        <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                            Continue reading
+                        </a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+
+                        <img class="bd-placeholder-img" width="200" height="250" src="p1.jpg" />
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <!--car 8-->
+
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success">Design</strong>
+                        <h3 class="mb-0">Learn Web Desgin</h3>
+                        <div class="mb-1 text-body-succes text-primary">Nov 14</div>
+                        <p class="mb-auto">
+                            Web Design: Web design encompasses the visual and user experience aspects of creating websites, focusing on aesthetics, layout, and usability to enhance user interaction and engagement.
+
+                        </p>
+                        <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                            Continue reading
+                            <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+                        </a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img class="bd-placeholder-img " width="200" height="250" src="design.jpg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <!--  footer *******************************-->
+
+    <footer class="container">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>© 2017–2024 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </footer>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

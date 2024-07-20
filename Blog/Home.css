@@ -1,0 +1,15 @@
+﻿#img2 {
+    height:400px; /* Set the height of the carousel item */
+}
+
+    #img2 img {
+        width: 100%; /* Make the image width 100% of its container */
+        height: auto; /* Ensure the image height adjusts proportionally */
+    }
+#container2 {
+    height:500px; /* Set the height of the carousel item */
+}
+    #container2 img{
+        width: 100%; /* Make the image width 100% of its container */
+        height: auto; /* Ensure the image height adjusts proportionally */
+    }
